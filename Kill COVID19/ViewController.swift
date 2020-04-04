@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     var timer = Timer()
     var counter = 0
     
+    var covidArray = [UIImageView]()
+    var hideTimer = Timer()
+    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var hightScoreLabel: UILabel!
@@ -64,12 +67,32 @@ class ViewController: UIViewController {
         c9.addGestureRecognizer(recognizer9)
         
         
+        covidArray = [c1,c2,c3,c4,c5,c6,c7,c8,c9]
+        
         // timers
         counter = 10
         
         timerLabel.text = "\(counter)"
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+        
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideCovid), userInfo: nil, repeats: true)
+        
+        hideCovid()
+    }
+    
+    @objc func hideCovid(){
+        for c in covidArray {
+            c.isHidden = true
+        }
+        
+        let random = Int(arc4random_uniform(UInt32(covidArray.count - 1)))
+        
+        
+        covidArray[random].isHidden = false
+        
+        
+        
     }
     
     @objc func increaseScore(){
@@ -83,10 +106,29 @@ class ViewController: UIViewController {
         
         if counter == 0{
             timer.invalidate()
+            hideTimer.invalidate()
+            
+             for c in covidArray {
+               c.isHidden = true
+           }
+            
+            
             let alert = UIAlertController(title: "Time over", message: "Do you want to play again", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-            let replayButton = UIAlertAction(title: "Replay", style: .default) { (UIAlertAction) in
+            let replayButton = UIAlertAction(title: "Replay", style: .default) {
+                (UIAlertAction) in
                 //replay
+                self.score = 0
+                self.scoreLabel.text = "Score: \(self.score)"
+                
+                self.counter = 10
+                self.timerLabel.text = "\(self.counter)"
+                
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
+                      
+                self.hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.hideCovid), userInfo: nil, repeats: true)
+                
+                
             }
             
             alert.addAction(okButton)

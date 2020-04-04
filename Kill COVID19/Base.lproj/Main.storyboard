@@ -33,72 +33,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-1b-9m5">
-                                <rect key="frame" x="0.0" y="96.5" width="375" height="450"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="2" id="8fv-be-q6W">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="x0T-cz-X3j">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="150"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="RGm-nf-FKU">
-                                                <rect key="frame" x="125.5" y="0.0" width="124" height="150"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-5m-7Co">
-                                                <rect key="frame" x="251.5" y="0.0" width="123.5" height="150"/>
-                                            </imageView>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="kDg-56-1Qs"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="2" id="CC1-QH-ucR">
-                                        <rect key="frame" x="0.0" y="150" width="375" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-ut-OCR">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="150"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="VWv-et-gIq">
-                                                <rect key="frame" x="125.5" y="0.0" width="124" height="150"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="Dvt-ZS-i1R">
-                                                <rect key="frame" x="251.5" y="0.0" width="123.5" height="150"/>
-                                            </imageView>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="Tt9-xc-qHS"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-hw-JH5">
-                                        <rect key="frame" x="0.0" y="300" width="375" height="150"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-ag-MXC">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="150"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="khH-Hw-EL6">
-                                                <rect key="frame" x="125.5" y="0.0" width="124" height="150"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="nd0-6g-4Tj">
-                                                <rect key="frame" x="251.5" y="0.0" width="123.5" height="150"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="x0T-cz-X3j">
+                                <rect key="frame" x="0.0" y="156" width="123.5" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="RGm-nf-FKU">
+                                <rect key="frame" x="83" y="144" width="186.5" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-5m-7Co">
+                                <rect key="frame" x="235" y="144" width="140" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="VWv-et-gIq">
+                                <rect key="frame" x="94" y="280" width="186.5" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="Dvt-ZS-i1R">
+                                <rect key="frame" x="252" y="290" width="124" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-ag-MXC">
+                                <rect key="frame" x="0.0" y="438" width="123.5" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="khH-Hw-EL6">
+                                <rect key="frame" x="83" y="431" width="186.5" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="nd0-6g-4Tj">
+                                <rect key="frame" x="233" y="462" width="142" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-ut-OCR">
+                                <rect key="frame" x="0.0" y="290" width="123.5" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bbl-1b-9m5" secondAttribute="trailing" id="3Bb-Ga-Lgq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iLL-iz-gbU" secondAttribute="trailing" id="DV6-RF-ZPh"/>
                             <constraint firstItem="c0e-5m-VCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5l-5H-Bri"/>
                             <constraint firstItem="c0e-5m-VCd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="Q8f-19-oaH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLL-iz-gbU" secondAttribute="bottom" constant="10" id="SH6-56-tDG"/>
                             <constraint firstItem="wDd-l9-pCQ" firstAttribute="top" secondItem="c0e-5m-VCd" secondAttribute="bottom" constant="10" id="VHL-e5-0wP"/>
-                            <constraint firstItem="bbl-1b-9m5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XZv-xr-A0c"/>
                             <constraint firstItem="iLL-iz-gbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ca1-rA-Xlt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLL-iz-gbU" secondAttribute="bottom" constant="10" id="fsf-7Y-9Oc"/>
                             <constraint firstItem="iLL-iz-gbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gb4-NI-Mgr"/>
-                            <constraint firstItem="bbl-1b-9m5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q5v-BT-jWp"/>
-                            <constraint firstItem="bbl-1b-9m5" firstAttribute="top" secondItem="wDd-l9-pCQ" secondAttribute="bottom" constant="10" id="tqe-fV-Bg8"/>
                             <constraint firstItem="wDd-l9-pCQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xUd-ES-9cy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
