@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var covidArray = [UIImageView]()
     var hideTimer = Timer()
     
+    var hightScore = 0
+    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var hightScoreLabel: UILabel!
@@ -34,6 +36,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        //highScore
+        
+        let storedHighscore = UserDefaults.standard.object(forKey: "highscore")
+        
+        if storedHighscore == nil {
+            hightScore = 0
+            hightScoreLabel.text = "Highscore: \(hightScore)"
+        }
+        
+        if let newScore =  storedHighscore as? Int {
+            hightScore = newScore
+            hightScoreLabel.text = "Highscore : \(hightScore)"
+        }
         
         scoreLabel.text = "Score \(score)"
         c1.isUserInteractionEnabled = true
@@ -113,7 +128,17 @@ class ViewController: UIViewController {
            }
             
             
-            let alert = UIAlertController(title: "Time over", message: "Do you want to play again", preferredStyle: .alert)
+            //hight score
+            
+            if self.score > self.hightScore{
+                self.hightScore = self.score
+                
+                hightScoreLabel.text = "Highscore: \(self.hightScore)"
+                
+                UserDefaults.standard.set(self.hightScore, forKey: "highscore")
+            }
+            
+            let alert = UIAlertController(title: "Time over", message: "Do you want to play again 😎", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
             let replayButton = UIAlertAction(title: "Replay", style: .default) {
                 (UIAlertAction) in
