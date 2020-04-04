@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     var score = 0
+    var timer = Timer()
+    var counter = 0
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -27,6 +29,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         scoreLabel.text = "Score \(score)"
         c1.isUserInteractionEnabled = true
         c2.isUserInteractionEnabled = true
@@ -57,6 +62,14 @@ class ViewController: UIViewController {
         c7.addGestureRecognizer(recognizer7)
         c8.addGestureRecognizer(recognizer8)
         c9.addGestureRecognizer(recognizer9)
+        
+        
+        // timers
+        counter = 10
+        
+        timerLabel.text = "\(counter)"
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
     }
     
     @objc func increaseScore(){
@@ -64,7 +77,23 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score: \(score)"
     }
     
-    
+    @objc func countDown(){
+        counter -= 1
+        timerLabel.text = "\(counter)"
+        
+        if counter == 0{
+            timer.invalidate()
+            let alert = UIAlertController(title: "Time over", message: "Do you want to play again", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            let replayButton = UIAlertAction(title: "Replay", style: .default) { (UIAlertAction) in
+                //replay
+            }
+            
+            alert.addAction(okButton)
+            alert.addAction(replayButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 
 
 }
