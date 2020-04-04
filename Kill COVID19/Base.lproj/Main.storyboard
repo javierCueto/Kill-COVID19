@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,120 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kill_COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-5m-VCd">
+                                <rect key="frame" x="169" y="20" width="37" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hight Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLL-iz-gbU">
+                                <rect key="frame" x="0.0" y="636.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDd-l9-pCQ">
+                                <rect key="frame" x="155.5" y="66" width="64" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-1b-9m5">
+                                <rect key="frame" x="0.0" y="96.5" width="375" height="450"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="2" id="8fv-be-q6W">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="x0T-cz-X3j">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="RGm-nf-FKU">
+                                                <rect key="frame" x="125.5" y="0.0" width="124" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-5m-7Co">
+                                                <rect key="frame" x="251.5" y="0.0" width="123.5" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="kDg-56-1Qs"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="2" id="CC1-QH-ucR">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-ut-OCR">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="VWv-et-gIq">
+                                                <rect key="frame" x="125.5" y="0.0" width="124" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="Dvt-ZS-i1R">
+                                                <rect key="frame" x="251.5" y="0.0" width="123.5" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Tt9-xc-qHS"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-hw-JH5">
+                                        <rect key="frame" x="0.0" y="300" width="375" height="150"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-ag-MXC">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="khH-Hw-EL6">
+                                                <rect key="frame" x="125.5" y="0.0" width="124" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19" translatesAutoresizingMaskIntoConstraints="NO" id="nd0-6g-4Tj">
+                                                <rect key="frame" x="251.5" y="0.0" width="123.5" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bbl-1b-9m5" secondAttribute="trailing" id="3Bb-Ga-Lgq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iLL-iz-gbU" secondAttribute="trailing" id="DV6-RF-ZPh"/>
+                            <constraint firstItem="c0e-5m-VCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5l-5H-Bri"/>
+                            <constraint firstItem="c0e-5m-VCd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="Q8f-19-oaH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLL-iz-gbU" secondAttribute="bottom" constant="10" id="SH6-56-tDG"/>
+                            <constraint firstItem="wDd-l9-pCQ" firstAttribute="top" secondItem="c0e-5m-VCd" secondAttribute="bottom" constant="10" id="VHL-e5-0wP"/>
+                            <constraint firstItem="bbl-1b-9m5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XZv-xr-A0c"/>
+                            <constraint firstItem="iLL-iz-gbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ca1-rA-Xlt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLL-iz-gbU" secondAttribute="bottom" constant="10" id="fsf-7Y-9Oc"/>
+                            <constraint firstItem="iLL-iz-gbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gb4-NI-Mgr"/>
+                            <constraint firstItem="bbl-1b-9m5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q5v-BT-jWp"/>
+                            <constraint firstItem="bbl-1b-9m5" firstAttribute="top" secondItem="wDd-l9-pCQ" secondAttribute="bottom" constant="10" id="tqe-fV-Bg8"/>
+                            <constraint firstItem="wDd-l9-pCQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xUd-ES-9cy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="c1" destination="x0T-cz-X3j" id="jyz-os-BfI"/>
+                        <outlet property="c2" destination="RGm-nf-FKU" id="8YI-y3-B4k"/>
+                        <outlet property="c3" destination="ehC-5m-7Co" id="EXU-1K-yDO"/>
+                        <outlet property="c4" destination="HRL-ut-OCR" id="Zzl-IP-MRl"/>
+                        <outlet property="c5" destination="VWv-et-gIq" id="Zfp-ej-ujg"/>
+                        <outlet property="c6" destination="Dvt-ZS-i1R" id="WHU-b9-WcS"/>
+                        <outlet property="c7" destination="ckb-ag-MXC" id="DUX-xp-0f6"/>
+                        <outlet property="c8" destination="khH-Hw-EL6" id="VoK-k8-4pC"/>
+                        <outlet property="c9" destination="nd0-6g-4Tj" id="ZVU-Rs-tkP"/>
+                        <outlet property="hightScoreLabel" destination="iLL-iz-gbU" id="V6k-xm-ENp"/>
+                        <outlet property="scoreLabel" destination="wDd-l9-pCQ" id="XDW-l0-tCF"/>
+                        <outlet property="timerLabel" destination="c0e-5m-VCd" id="lyJ-Md-R2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Covid19" width="150" height="150"/>
+    </resources>
 </document>
